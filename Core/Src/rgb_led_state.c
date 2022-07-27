@@ -1,6 +1,6 @@
 /**
  * @file rgb_led_state.c
- * @author Ivin Lim (ivin.lim16@gmail.com.com)
+ * @author Ivin Lim (ivin.lim16@gmail.com)
  * @brief 
  * @version 0.1
  * @date 2022-07-26

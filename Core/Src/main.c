@@ -25,6 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "rgb_led_state.h"
+#include "rgb_brightness.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -99,6 +100,27 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+  HAL_Delay(5000);
+  rgbLedState_SetOff();
+  HAL_Delay(5000);
+  rgbLedState_SetRed();
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(10);
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(20);
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(40);
+
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(60);
+
+
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(80);
+
+  HAL_Delay(1000);
+  rgbBrightness_setLedBrightness(100);
+
   }
   /* USER CODE END 3 */
 }
