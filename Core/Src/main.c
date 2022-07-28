@@ -24,8 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "rgb_led_state.h"
-#include "rgb_brightness.h"
+#include "rgb_sample_routine.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -90,7 +89,8 @@ int main(void)
   MX_USART2_UART_Init();
   MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
-  rgbLedStateInit();
+//  rgbLedStateInit();
+  ledRoutine_Init();
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,26 +100,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-  HAL_Delay(5000);
-  rgbLedState_SetOff();
-  HAL_Delay(5000);
-  rgbLedState_SetRed();
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(10);
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(20);
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(40);
-
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(60);
-
-
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(80);
-
-  HAL_Delay(1000);
-  rgbBrightness_setLedBrightness(100);
+  ledRoutine_Update();
 
   }
   /* USER CODE END 3 */
